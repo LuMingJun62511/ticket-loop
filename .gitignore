@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# 环境与密钥
+.env
+.env.local
+
+# 数据：只允许 schema 与合成数据入库
+data/raw/*
+!data/raw/.gitkeep
+data/private/*
+!data/private/.gitkeep
+data/splits/*
+!data/splits/.gitkeep
+
+# 评测：golden 公开部分入库，private 与产物不入库
+eval/private/*
+!eval/private/.gitkeep
+eval/reports/*
+!eval/reports/.gitkeep
+
+# 模型与产物
+models/
+outputs/
+*.gguf
+*.safetensors
+*.bin
+
+# 日志与系统
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.idea/
+.vscode/
